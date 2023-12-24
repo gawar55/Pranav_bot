@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
     <xacro:include filename="inertial_macros.xacro"/>
-    <!-- <xacro:include filename="gazebo_control.xacro" /> -->
 
 
     <material name="white">
@@ -18,6 +17,11 @@
 
     <material name="black">
         <color rgba="0 0 0 1" />
+    </material>
+   
+    
+    <material name="red">
+        <color rgba="1 0 0 1" />
     </material>
    
     <!--Base Link-->
@@ -46,12 +50,12 @@
                 <box size="0.3 0.3 0.15"/>
             </geometry>
         </collision>
-          <xacro:inertial_box mass="0.5" x="0.3" y="0.3" z="0.15">
+        <xacro:inertial_box mass="0.5" x="0.3" y="0.3" z="0.15">
             <origin xyz="0.15 0 0.075" rpy="0 0 0"/>
         </xacro:inertial_box>
     </link>
 
-    <gazebo refrence="chassis">
+    <gazebo reference="chassis">
         <material>Gazebo/White</material>
     </gazebo>
 
@@ -69,19 +73,20 @@
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
         </collision>
-                <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
 
     </link>  
 
-     <gazebo refrence="left_wheel">
+     <gazebo reference="left_wheel">
         <material>Gazebo/Blue</material>
     </gazebo>
 
@@ -100,6 +105,7 @@
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
+            <material name="blue"/>
         </visual>
          <collision>
             <geometry>
@@ -110,7 +116,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-     <gazebo refrence="right_wheel">
+     <gazebo reference="right_wheel">
         <material>Gazebo/Blue</material>
     </gazebo>
 
@@ -138,7 +144,7 @@
         </xacro:inertial_sphere>
     </link>
 
-    <gazebo refrence="caster_wheel">
+    <gazebo reference="caster_wheel">
             <material>Gazebo/Black</material>
             <mu1 value="0.001"/>
             <mu2 value="0.001"/>
