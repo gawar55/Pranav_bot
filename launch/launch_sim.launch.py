@@ -29,7 +29,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'empty.sdf'
+        'empty.world'
         )    
     
     world = LaunchConfiguration('world')
@@ -54,6 +54,21 @@ def generate_launch_description():
                                    '-z','0.1'],
                         output='screen')
 
+    bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
+        ]
+    )
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
+    )
 
 
     diff_drive_spawner = Node(
@@ -77,5 +92,7 @@ def generate_launch_description():
         world_arg,
         spawn_entity,
         diff_drive_spawner,
-        joint_broad_spawner
+        ros_gz_bridge,
+        joint_broad_spawner,
+        ros_gz_image_bridge 
     ])
