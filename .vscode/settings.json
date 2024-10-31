@@ -1,0 +1,38 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/pranav/r2_ws/build/silo_tracking",
+        "/home/pranav/r2_ws/install/silo_tracking/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/r2_py",
+        "/home/pranav/r2_ws/install/r2_py/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/r2_navigation",
+        "/home/pranav/r2_ws/install/r2_navigation/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/luna_control",
+        "/home/pranav/r2_ws/install/luna_control/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/install/r2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/pranav/r2_ws/install/line_following/local/lib/python3.10/dist-packages",
+        "/home/pranav/r2_ws/build/controls",
+        "/home/pranav/r2_ws/install/controls/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/ball_tracking",
+        "/home/pranav/r2_ws/install/ball_tracking/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/pranav/r2_ws/build/silo_tracking",
+        "/home/pranav/r2_ws/install/silo_tracking/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/r2_py",
+        "/home/pranav/r2_ws/install/r2_py/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/r2_navigation",
+        "/home/pranav/r2_ws/install/r2_navigation/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/luna_control",
+        "/home/pranav/r2_ws/install/luna_control/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/install/r2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/pranav/r2_ws/install/line_following/local/lib/python3.10/dist-packages",
+        "/home/pranav/r2_ws/build/controls",
+        "/home/pranav/r2_ws/install/controls/lib/python3.10/site-packages",
+        "/home/pranav/r2_ws/build/ball_tracking",
+        "/home/pranav/r2_ws/install/ball_tracking/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
